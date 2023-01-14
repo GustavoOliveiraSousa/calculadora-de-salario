@@ -1,5 +1,5 @@
 function addEmployee() {
-    var name = document.getElementById("name").value + ' :';
+    var name = document.getElementById("name").value + ':';
     var days = document.getElementById("days").value;
     var halfDays = document.getElementById("halfDays").value;
     var rate = document.getElementById("rate").value;
