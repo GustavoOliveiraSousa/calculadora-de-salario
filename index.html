@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Salário</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<script src="./script.js"></script>
+
+<body class="Wrapper">
+    <h3 class="HeadDiarias">Calculadora de Salário</h3>
+    <form class="Formulario">
+        <div class="NomeFun">
+            <label class="Nome" for="name">Nome do funcionário:</label>
+            <input class="InpNome" type="text" id="name" name="name">
+        </div>
+
+
+        <br>
+
+        <h3 class="HeadDiarias">Diárias</h3>
+
+        <div class="diarias">
+            <div class="diariasInteiras">
+                <label class="DiaInt" for="days">Inteiras:</label>
+                <input class="InpDiaInt" type="number" id="days" name="days">
+            </div>
+
+            <br>
+            <div class="meiasDiarias">
+                <label class="DiaMeia" for="halfDays">Meias:</label>
+                <input class="InpDiaMeia" type="number" id="halfDays" name="halfDays">
+            </div>
+            <div class="valorDiarias">
+                <label class="Valor" for="rate">Valor da diária:</label>
+                <input class="InpValor" type="number" id="rate" name="rate">
+            </div>
+
+        </div>
+
+        <br>
+
+        <br>
+        <button class="AdcFun" type="button" onclick="addEmployee()">Adicionar funcionário</button>
+    </form>
+    <table id="employee-table">
+        <thead>
+            <tr>
+                <th class="NomeEmp">Nome</th>
+                <th class="SalEmp">Salário</th>
+            </tr>
+        </thead>
+        <tbody id="employee-table-body">
+        </tbody>
+    </table>
+    <div class="export">
+        <button class="ExportTXT" type="button" onclick="exportTable()">Exportar para TXT<img class="imgTXT"
+                src="https://cdn-icons-png.flaticon.com/512/3022/3022200.png" alt=""></button>
+
+
+
+
+        <button class="ExportZap" type="button" onclick="exportTableToWhatsApp()">Exportar via Whatsapp<img
+                class="imgTXT" src="https://cdn-icons-png.flaticon.com/512/154/154858.png" alt=""></button>
+    </div>
+
+
+</body>
+
+</html>

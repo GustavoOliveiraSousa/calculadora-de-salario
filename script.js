@@ -1,12 +1,10 @@
 function addEmployee() {
-    var name = document.getElementById("name").value + ':';
+    var name = document.getElementById("name").value + ' =';
     var days = document.getElementById("days").value;
     var halfDays = document.getElementById("halfDays").value;
     var rate = document.getElementById("rate").value;
     var salary = ((days + (halfDays * 0.5)) * rate) / 10;
 
-    // adicionando a variavel com o salario formatado
-    var salaryFormatted = salary.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
     var tableBody = document.getElementById("employee-table-body");
 

@@ -1,0 +1,121 @@
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.HeadDiarias {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.Formulario {
+    margin-bottom: 20px;
+}
+
+.NomeFun {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+.InpNome {
+    width: 100%;
+}
+
+.HeadDiarias {
+    width: 100%;
+    text-align: center;
+}
+
+.diarias {
+    /* justify-content: center; */
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.diariasInteiras {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 33%;
+}
+
+.DiaInt {
+    width: 50%;
+}
+
+.InpDiaInt {
+    width: 100%;
+    margin-right: 10%;
+}
+
+.meiasDiarias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 33%;
+}
+
+.DiaMeia {
+    width: 50%;
+}
+
+.InpDiaMeia {
+    width: 100%;
+    margin-right: 10%;
+}
+
+.valorDiarias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 33%;
+}
+
+.Valor {
+    width: 50%;
+}
+
+.InpValor {
+    width: 100%;
+}
+
+.AdcFun {
+    border-radius: 50px;
+    width: 20vh;
+    height: 5vh;
+}
+
+.export {
+    display: flex;
+}
+
+.ExportTXT {
+    border-radius: 50px;
+    width: 20vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+}
+
+.imgTXT {
+    width: 5vh;
+}
+
+.ExportZap {
+    border-radius: 50px;
+    width: 20vh;
+    height: 7vh;
+    margin-left: 10vh;
+    display: flex;
+    align-items: center;
+
+}
