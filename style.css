@@ -1,9 +1,12 @@
 html {
-    background-image: linear-gradient(to bottom, #006634, #3a8d38, #72b533, #b3db25, #fffe00);
-    /* background-repeat: repeat; */
-    background-size: 15%;
+    /* background-image: linear-gradient(to top, #006634, #3a8d38, #72b533, #b3db25, #fffe00); */
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100%;
     width: 100%;
+    background-image: url(./wave.svg), url(./wave-01.svg);
+    background-color: #dcdcdc;
 }
 
 .Wrapper {

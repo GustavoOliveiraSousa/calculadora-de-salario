@@ -1,3 +1,4 @@
+//Creating the employee
 function addEmployee() {
     var name = document.getElementById("name").value + ' =';
     var days = document.getElementById("days").value;
@@ -19,7 +20,14 @@ function addEmployee() {
     newRow.appendChild(salaryCol);
 
     tableBody.appendChild(newRow);
+
+
+    document.getElementById("name").value = '';
+    document.getElementById("days").value = '';
+    document.getElementById("halfDays").value = '';
+    document.getElementById("rate").value = '';
 }
+
 
 //export table to txt
 function exportTable() {
