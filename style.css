@@ -1,21 +1,36 @@
-html {
-    /* background-image: linear-gradient(to top, #006634, #3a8d38, #72b533, #b3db25, #fffe00); */
+.bg {
     background-repeat: repeat;
     background-size: cover;
-    background-attachment: fixed;
+    position: fixed;
+    margin: -10px;
     height: 100%;
     width: 100%;
-    background-image: url(./wave.svg), url(./wave-01.svg);
+    z-index: 1;
+
+    display: block;
+    background-image: url('./wave.svg'), url(./wave-01.svg);
     background-color: #dcdcdc;
+
+    /* -webkit-filter: blur(0px);
+    filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px); */
+
+
 }
 
+
 .Wrapper {
+    z-index: 9999;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     font-family: 'Rawline', Verdana;
+    color: black;
 }
 
 .HeadDiarias {
@@ -106,8 +121,8 @@ html {
 
 .AdcFun {
     border-radius: 50px;
-    width: 20vh;
-    height: 5vh;
+    /* width: 20%;
+    height: 5%; */
 }
 
 .export {
@@ -116,8 +131,8 @@ html {
 
 .ExportTXT {
     border-radius: 50px;
-    width: 20vh;
-    height: 7vh;
+    /* width: 20vh;
+    height: 7vh; */
     display: flex;
     align-items: center;
 }
@@ -128,8 +143,8 @@ html {
 
 .ExportZap {
     border-radius: 50px;
-    width: 20vh;
-    height: 7vh;
+    /* width: 20vh;
+    height: 7vh; */
     margin-left: 10vh;
     display: flex;
     align-items: center;
