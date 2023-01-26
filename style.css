@@ -20,6 +20,7 @@ html {
     background-size: cover;
     height: 100%;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .Wrapper {
@@ -29,7 +30,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 90%;
     margin: auto;
     font-family: 'Rawline', Verdana;
     color: black;
