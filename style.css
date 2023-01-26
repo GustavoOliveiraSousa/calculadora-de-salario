@@ -19,6 +19,7 @@ html {
     background-repeat: repeat;
     background-size: cover;
     height: 100%;
+    font-weight: 600;
 }
 
 .Wrapper {
@@ -55,6 +56,7 @@ html {
 .InpNome {
     width: 100%;
     border-radius: 10px;
+    border: none;
 }
 
 .HeadDiarias {
@@ -86,6 +88,7 @@ html {
     height: 50%;
     margin-right: 10%;
     border-radius: 10px;
+    border: none;
 }
 
 .meiasDiarias {
@@ -104,6 +107,7 @@ html {
     height: 50%;
     margin-right: 10%;
     border-radius: 10px;
+    border: none;
 }
 
 .valorDiarias {
@@ -121,10 +125,12 @@ html {
     width: 100%;
     height: 50%;
     border-radius: 10px;
+    border: none;
 }
 
 .AdcFun {
     border-radius: 50px;
+    background-color: white;
     /* width: 20%;
     height: 5%; */
 }
