@@ -77,7 +77,20 @@ function exportTableToWhatsApp() {
         }
     }
     // Abre uma conversa pré-preenchida no WhatsApp Web
-    var whatsappUrl = "https://web.whatsapp.com/send?text=" + encodeURIComponent(message);
+    // var whatsappUrl = "https://web.whatsapp.com/send?text=" + encodeURIComponent(message);
+
+    // Abre a aplicação do WhatsApp no dispositivo móvel
+    //var whatsappUrl = "whatsapp://send?text=" + encodeURIComponent(message);
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // Abre a aplicação do WhatsApp no dispositivo móvel
+        var whatsappUrl = "whatsapp://send?text=" + encodeURIComponent(message);
+        window.open(whatsappUrl, "_blank");
+    } else {
+        // Abre uma conversa pré-preenchida no WhatsApp Web
+        var whatsappUrl = "https://web.whatsapp.com/send?text=" + encodeURIComponent(message);
+        window.open(whatsappUrl, "_blank");
+    }
+
     window.open(whatsappUrl, "_blank");
 }
-
