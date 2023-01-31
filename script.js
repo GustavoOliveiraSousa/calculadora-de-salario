@@ -12,12 +12,26 @@ function addEmployee() {
     var newRow = document.createElement("tr");
     var nameCol = document.createElement("td");
     var salaryCol = document.createElement("td");
+    var deleteCol = document.createElement("td");
 
     nameCol.innerHTML = name;
     salaryCol.innerHTML = salary;
 
+    // add delete button
+    var deleteButton = document.createElement("button");
+    deleteButton.style.borderRadius = '10px'
+
+    deleteButton.innerHTML = "Deletar";
+    deleteButton.onclick = function () {
+        tableBody.removeChild(newRow);
+    };
+
+    deleteCol.appendChild(deleteButton);
+
+
     newRow.appendChild(nameCol);
     newRow.appendChild(salaryCol);
+    newRow.appendChild(deleteCol);
 
     tableBody.appendChild(newRow);
 
