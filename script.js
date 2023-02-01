@@ -20,6 +20,8 @@ function addEmployee() {
 
     // add delete button
     var deleteButton = document.createElement("button");
+
+    deleteButton.style.borderRadius = '10px'
     deleteButton.innerHTML = "Deletar";
     deleteButton.onclick = function () {
         tableBody.removeChild(newRow);
@@ -89,8 +91,6 @@ function exportTableToWhatsApp() {
                 if (!isNaN(salary)) {
                     var salaryFormatted = salary.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
                     message += salaryFormatted + "\n";
-                } else {
-                    message += rowData[j].innerHTML + "\n";
                 }
             }
         }
