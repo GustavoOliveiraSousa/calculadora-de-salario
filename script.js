@@ -13,13 +13,23 @@ function addEmployee() {
     var nameCol = document.createElement("td");
     var salaryCol = document.createElement("td");
 
+    var deleteCol = document.createElement("td");
+
     nameCol.innerHTML = name;
     salaryCol.innerHTML = salary;
 
+    // add delete button
+    var deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Deletar";
+    deleteButton.onclick = function () {
+        tableBody.removeChild(newRow);
+    };
+    deleteCol.appendChild(deleteButton);
 
 
     newRow.appendChild(nameCol);
     newRow.appendChild(salaryCol);
+    newRow.appendChild(deleteCol);
 
     tableBody.appendChild(newRow);
 
@@ -42,9 +52,11 @@ function exportTable() {
             if (j === 0) {
                 txtString += rowData[j].innerHTML + " ";
             } else {
-                // formatando o salário como moeda
-                var salaryFormatted = parseFloat(rowData[j].innerHTML).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-                txtString += salaryFormatted + "\n";
+                var salary = parseFloat(rowData[j].innerHTML);
+                if (!isNaN(salary)) {
+                    var salaryFormatted = salary.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+                    txtString += salaryFormatted + "\n";
+                }
             }
         }
     }
@@ -73,11 +85,28 @@ function exportTableToWhatsApp() {
             if (j === 0) {
                 message += rowData[j].innerHTML + " ";
             } else {
-                var salaryFormatted = parseFloat(rowData[j].innerHTML).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-                message += salaryFormatted + "\n";
+                var salary = parseFloat(rowData[j].innerHTML);
+                if (!isNaN(salary)) {
+                    var salaryFormatted = salary.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+                    message += salaryFormatted + "\n";
+                } else {
+                    message += rowData[j].innerHTML + "\n";
+                }
             }
         }
     }
+
+    // for (var i = 1; i < table.rows.length; i++) {
+    //     var rowData = table.rows[i].cells;
+    //     for (var j = 0; j < rowData.length; j++) {
+    //         if (j === 0) {
+    //             message += rowData[j].innerHTML + " ";
+    //         } else {
+    //             var salaryFormatted = parseFloat(rowData[j].innerHTML).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    //             message += salaryFormatted + "\n";
+    //         }
+    //     }
+    // }
     // Abre uma conversa pré-preenchida no WhatsApp Web
     // var whatsappUrl = "https://web.whatsapp.com/send?text=" + encodeURIComponent(message);
 
