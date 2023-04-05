@@ -24,10 +24,24 @@
 
         <h3 class="HeadDiarias">Calculadora de Salário</h3>
         <form class="Formulario" id="Formulario">
-            <div class="NomeFun">
+            <!-- <div class="NomeFun">
                 <label class="Nome" for="name">Nome do funcionário:</label>
                 <input class="InpNome" type="text" id="name" name="name"
                     oninput="this.value = this.value.toUpperCase()">
+            </div> -->
+
+            <div class="NomeFun">
+                <label class="Nome" for="name">Nome do funcionário:</label>
+                <select class="InpNome" id="name" name="name">
+                    <option value="CARLOS HENRIQUE CAMELO DA SILVA">CARLOS HENRIQUE CAMELO DA SILVA</option>
+                    <option value="FRANCISCO EVANDRO DE SOUSA">FRANCISCO EVANDRO DE SOUSA</option>
+                    <option value="JOÃO TORRES EUCLIDES">JOÃO TORRES EUCLIDES</option>
+                    <option value="JOAQUIM ARAÚJO DA SILVA">JOAQUIM ARAÚJO DA SILVA</option>
+                    <option value="JOSÉ VALDEMI ALMEIDA DE SOUZA">JOSÉ VALDEMI ALMEIDA DE SOUZA</option>
+                    <option value="JOSÉ WAGNER ARAÚJO MARINHO">JOSÉ WAGNER ARAÚJO MARINHO</option>
+                    <option value="MANOEL LOPES DOS SANTOS">MANOEL LOPES DOS SANTOS</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
             </div>
 
 
@@ -71,9 +85,6 @@
         <div class="export">
             <button class="ExportTXT" type="button" onclick="exportTable()">Exportar para TXT<img class="imgTXT"
                     src="https://cdn-icons-png.flaticon.com/512/3022/3022200.png" alt=""></button>
-
-
-
 
             <button class="ExportZap" type="button" onclick="exportTableToWhatsApp()">Exportar via Whatsapp<img
                     class="imgTXT" src="https://cdn-icons-png.flaticon.com/512/154/154858.png" alt=""></button>
