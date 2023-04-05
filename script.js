@@ -1,3 +1,10 @@
+//Chama a função addEmployee ao clicar no enter
+function handleKeyUp(event) {
+    if (event.key === "Enter") {
+        addEmployee();
+    }
+}
+
 //Creating the employee
 function addEmployee() {
     var name = document.getElementById("name").value + ' =';
@@ -5,7 +12,6 @@ function addEmployee() {
     var halfDays = document.getElementById("halfDays").value;
     var rate = document.getElementById("rate").value;
     var salary = (days * rate) + (halfDays * (rate * 0.5));
-
 
     var tableBody = document.getElementById("employee-table-body");
 
