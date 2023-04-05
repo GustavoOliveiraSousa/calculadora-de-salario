@@ -4,7 +4,7 @@ function addEmployee() {
     var days = document.getElementById("days").value;
     var halfDays = document.getElementById("halfDays").value;
     var rate = document.getElementById("rate").value;
-    var salary = ((days + (halfDays * 0.5)) * rate) / 10;
+    var salary = (days * rate) + (halfDays * (rate * 0.5));
 
 
     var tableBody = document.getElementById("employee-table-body");
